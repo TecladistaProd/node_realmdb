@@ -1,0 +1,18 @@
+<%- contentFor('body') %>
+<h1 center>Modify Here</h1>
+
+<form method="post" action='/user/up'>
+	<label>
+		Name:
+		<input required="true" type="text" placeholder="Input Name Here" name='name' value="<%= user.name%>"/>
+	</label>
+	<label>
+		Age:
+		<input required="true" type="number" placeholder="Input Age Here" name='age' value="<%= user.age%>" />
+	</label>
+	<label>
+		RN:
+		<input hidden readonly required="true" type="number" placeholder="Input a ID number Here" value="<%= user.RN %>" name='RN' />
+	</label>
+	<input type="submit" value="Edit">
+</form>

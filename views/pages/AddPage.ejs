@@ -1,0 +1,23 @@
+<%- contentFor('body') %>
+<h1 center>Add Here a User</h1>
+
+<% if (message) { %>
+  <p><%=message%></p>
+<% } %>
+
+<form method="post" action='/user/insert'>
+	<label>
+		Name:
+		<input required="true" type="text" placeholder="Input Name Here" name='name' />
+	</label>
+	<label>
+		Age:
+		<input required="true" type="number" placeholder="Input Age Here" name='age' />
+	</label>
+	<label>
+		RN:
+		<input required="true" type="number" placeholder="Input a ID number Here" name='RN' />
+	</label>
+	<input type="submit" value="Add">
+	<input type="reset" value="Clear">
+</form>

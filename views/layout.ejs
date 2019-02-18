@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RealmDatabase Test</title>
+	<link rel="stylesheet" href="/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<main>
+		<header>
+			<h1>RealmTest</h1>
+			<nav>
+				<button id="menu-btn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</button>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/add">Add User</a></li>
+					<li><a href="/list">List User</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			<%- body %>
+		</div>
+	</main>
+	<script defer>
+		const mbtn = document.querySelector('#menu-btn')
+		mbtn.addEventListener('click', () => {
+			mbtn.classList.toggle('change')
+			mbtn.parentNode.classList.toggle('menu-open')
+		})
+		document.querySelector(`a[href="${window.location.pathname}"`).classList.add('activated')
+	</script>
+</body>
+</html>
