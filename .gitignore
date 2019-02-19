@@ -1,4 +1,4 @@
 /node_modules
-*.realm
-*.realm.lock
-/default.realm.*
+default.realm
+default.realm.lock
+/default.realm.management
